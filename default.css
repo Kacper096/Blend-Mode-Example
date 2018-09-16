@@ -1,0 +1,139 @@
+:root
+{
+    --blue: #002B65;
+    --green: #009905;
+}
+body
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    height:100%;
+}
+section.background
+{
+    background: url(326448-P9J98W-210.jpg) fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Verdana", Georgia, sans-serif;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: normal;
+    height:100vh;
+    width:100%;
+}
+.box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size:8vw;
+    border-top: 10px solid var(--green);
+    border-bottom: 10px solid var(--green);
+    line-height: 1;
+    background-color: var(--blue);
+    color:white;
+    background-size: cover;
+    mix-blend-mode: normal;
+    height:50vh;
+    width:100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.box p 
+{
+    text-rendering: optimizeLegibility;
+    word-spacing: 5px;
+    margin:0;
+}
+
+.mode-name-box
+{
+    position: absolute;
+    bottom:12vh;
+    left:0;
+    right:0;
+    color: var(--blue);
+    text-align:center;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin:0 auto;
+    padding:0;
+    width:135px;
+    height:135px;
+    border: 5px solid white;
+    background:#ddd;
+    border-radius:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.mode-name-box::before
+{
+    content:"★";
+    display: block;
+    line-height: 1;
+    font-size: 20px;
+    margin-top: -20px;
+    margin-bottom:10px;
+    color:lighten(var(--green),10);
+    animation: spin 2.5s ease infinite;
+    transform-origin: center;
+}
+.mode-name
+{
+    position:relative;
+    left:0;
+    right:0;
+    animation: nudge 2.5s ease infinite;
+}
+
+@keyframes spin
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes nudge
+{
+    0%
+    {
+        transform: translate(0,0);
+    }
+    80%
+    {
+        transform: rotate(0,0);
+    }
+    90%
+    {
+        transform: translate(-10px,0);
+    }
+    93%
+    {
+        transform: translate(12px,0);
+    }
+    95%
+    {
+        transform: translate(-8px,0);
+    }
+    100%
+    {
+        transform: translate(0,0);
+    }
+}
